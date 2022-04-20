@@ -1,0 +1,78 @@
+.homeContainer {
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background: aliceblue;
+    outline: 1px solid black;
+    font-family: 'Kosugi Maru';
+}
+
+.slideLeft {
+    animation-name: slideLeft;
+    animation-duration: 0.5s;
+    left: 38%;
+}
+
+.slideRight {
+    animation-name: slideRight;
+    animation-duration: 0.5s;
+    left: 62%;
+}
+
+.undoSlideLeft {
+    animation-name: undoSlideLeft;
+    animation-duration: 0.5s;
+    left: 50%;
+}
+
+.undoSlideRight {
+    animation-name: undoSlideRight;
+    animation-duration: 0.5s;
+    left: 50%;
+}
+
+.linkBox {
+    outline: 1px solid black;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.linkBox:hover {
+    animation-name: linkFade;
+    animation-duration: 0.5s;
+    background: cornflowerblue;
+}
+
+@keyframes linkFade {
+    from { background: white; }
+    to { background: cornflowerblue; }
+}
+
+@keyframes slideLeft {
+    from { left: 50%; }
+    to { left: 38%; }
+}
+
+@keyframes slideRight {
+    from { left: 50%; }
+    to { left: 62%; }
+}
+
+@keyframes undoSlideLeft {
+    from { left: 38%; }
+    to { left: 50%; }
+}
+
+@keyframes undoSlideRight {
+    from { left: 62%; }
+    to { left: 50%; }
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
