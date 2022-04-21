@@ -1,10 +1,7 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, anime, tree } from '../images';
+import { carrot, github, viewer, anime, tree, alice, carrotwolf, comicviewer } from '../images';
 import { startConfetti } from '../confetti';
-
-//https://blaze-comic-viewer.netlify.app
-//https://hershnagpal.github.io/carrot-client/
 
 const Home = () => {
     const [tab, setTab] = useState('none');
@@ -31,17 +28,6 @@ const Home = () => {
         }
     };
 
-    const getContent = () => {
-        switch (tab) {
-            case 'viewer':
-                return <>
-                    <span>Viewer</span>
-                </>;
-            default:
-                break;
-        }
-    };
-
     return <>
         <div className="outerContainer">
             <img className="animeImage" src={anime} alt="anime" />
@@ -50,7 +36,48 @@ const Home = () => {
             <span className="titleText">水を飲む</span>
             <span className="titleText" style={{color: 'black', left: '55px'}}>水を飲む</span>
             <div className="homeContainer" id="detailsContainer">
-                {getContent}
+                {
+                    tab === 'viewer'
+                    ? <>
+                        <span><b>Blaze Comic Viewer</b></span><br /><br />
+                        <img src={comicviewer} alt="comicviewer" width="400" />
+                        <hr />
+                        <span>·	Comic viewer website for language learning made with React and MERN stack</span><br />
+                        <span>·	Uses Imgur API to upload albums as comics</span><br />
+                        <span>·	Vocabulary can be added to each page individually</span><br />
+                        <span>·	Full vocab list and comic completion can be viewed from the shelf</span><br />
+                        <span>·	Integrated dictionary search and zoom settings</span><br />
+                        <span><b>· React, MERN, JavaScript, MongoDB, ExpressJS, NodeJS, HTML, CSS, Redux, Material UI</b></span><br /><br />
+                        <a href="https://blaze-comic-viewer.netlify.app">Demo it here with Username: Freeze, Password: 123</a>
+                    </>
+
+                    : tab === 'carrot'
+                    ? <>
+                        <span><b>CarrotWolf</b></span><br /><br />
+                        <img src={carrotwolf} alt="carrotwolf" width="400" />
+                        <hr />
+                        <span>·	Turn-based strategy browser game made with React</span><br />
+                        <span>·	Used Redux for keeping track of the board state</span><br />
+                        <span>·	Controlled using keyboard input and the mouse</span><br />
+                        <span>·	Styled with Material UI and custom components</span><br />
+                        <span>·	Features enemy AI and random collectable items</span><br />
+                        <span><b>· React, JS, HTML, CSS, Redux, Material UI</b></span><br /><br />
+                        <a href="http://hershnagpal.github.io/carrot-client/">Play the game here!</a>
+
+                    </>
+
+                    : tab === 'github'
+                    ? <>
+                        <img className="aliceImage" src={alice} alt="alice" />
+                        <span>HaematicAlis@GitHub</span>
+                        <hr />
+                        <span>Currently working on:</span><br />
+                        <span><b>Portfolio website</b></span><br /><br />
+                        <a href="https://github.com/HaematicAlis">Click here for my GitHub!</a>
+                    </>
+
+                    : <span></span>
+                }
             </div>
             <div className="homeContainer" id="linksContainer">
                 <div className="linkBox" id="viewerBox" style={tab === 'viewer' ? {background: 'rgb(7,255,234)'} : {}} onClick={() => slide('viewer')}>

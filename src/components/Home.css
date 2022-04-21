@@ -92,6 +92,12 @@
     bottom: 0%;
 }
 
+.aliceImage {
+    border-radius: 50%;
+    border: 3px solid white;
+    background: #555;
+}
+
 .titleText {
     font-family: 'Kosugi Maru';
     font-size: 64px;
