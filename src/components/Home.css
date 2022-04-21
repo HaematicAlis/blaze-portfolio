@@ -98,6 +98,18 @@
     background: #555;
 }
 
+.magnifyImage {
+    width: 50px;
+    position: absolute;
+    top: 60px;
+    right: 25px;
+}
+
+.magnifyImage:hover {
+    cursor: pointer;
+    width: 60px;
+}
+
 .titleText {
     font-family: 'Kosugi Maru';
     font-size: 64px;
@@ -105,6 +117,32 @@
     left: 50px;
     top: 50px;
     color: rgb(248,104,255);
+}
+
+.popupOverlay {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 85%;
+    background: black;
+    z-index: 5;
+}
+
+.imagePopup {
+    height: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: black;
+}
+
+.centeredImage {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 a {

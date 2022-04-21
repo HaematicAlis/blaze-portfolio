@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, anime, tree, alice, carrotwolf, comicviewer } from '../images';
+import { carrot, github, viewer, anime, tree, alice, carrotwolf, comicviewer, magnify, xicon } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
     const [tab, setTab] = useState('none');
+    const [popup, setPopup] = useState({ visible: false, image: 'none'});
 
     useEffect(() => {
         startConfetti();
@@ -29,6 +30,16 @@ const Home = () => {
     };
 
     return <>
+        {   
+            popup.visible && <>
+                <div className="popupOverlay" onClick={() => setPopup({ visible: false, image: 'none' })}>
+                    <img className="magnifyImage" src={xicon} alt="xicon" />
+                </div>
+                <div className="imagePopup">
+                    <img className="centeredImage" src={popup.image} alt={popup.image} height="800" />
+                </div>
+            </>
+        }
         <div className="outerContainer">
             <img className="animeImage" src={anime} alt="anime" />
             <img className="treeImage" src={tree} alt="tree" />
@@ -40,7 +51,8 @@ const Home = () => {
                     tab === 'viewer'
                     ? <>
                         <span><b>Blaze Comic Viewer</b></span><br /><br />
-                        <img src={comicviewer} alt="comicviewer" width="400" />
+                        <img src={comicviewer} alt="comicviewer" width="400" onClick={() => setPopup({ visible: true, image: comicviewer })} />
+                        <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
                         <hr />
                         <span>·	Comic viewer website for language learning made with React and MERN stack</span><br />
                         <span>·	Uses Imgur API to upload albums as comics</span><br />
@@ -54,7 +66,8 @@ const Home = () => {
                     : tab === 'carrot'
                     ? <>
                         <span><b>CarrotWolf</b></span><br /><br />
-                        <img src={carrotwolf} alt="carrotwolf" width="400" />
+                        <img src={carrotwolf} alt="carrotwolf" width="400" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
+                        <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
                         <hr />
                         <span>·	Turn-based strategy browser game made with React</span><br />
                         <span>·	Used Redux for keeping track of the board state</span><br />
