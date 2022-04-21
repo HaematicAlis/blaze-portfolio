@@ -8,3 +8,4 @@ export const carrotwolf = require('./carrotwolf.png');
 export const comicviewer = require('./comicviewer.png');
 export const magnify = require('./magnify.png');
 export const xicon = require('./xicon.png');
+export const credits = require('./credits.png');

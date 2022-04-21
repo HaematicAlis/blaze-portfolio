@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, anime, tree, alice, carrotwolf, comicviewer, magnify, xicon } from '../images';
+import { carrot, github, viewer, anime, tree, alice, carrotwolf, comicviewer, magnify, xicon, credits } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
@@ -89,6 +89,16 @@ const Home = () => {
                         <a href="https://github.com/HaematicAlis">Click here for my GitHub!</a>
                     </>
 
+                    : tab === 'credits'
+                    ? <>
+                        <span>Image by: [artist unknown]</span><br />
+                        <span>Confetti particle script: </span>
+                        <a href="https://www.cssscript.com/confetti-falling-animation/">CSS Script</a><br />
+                        <span>Font: </span>
+                        <a href="https://fonts.google.com/specimen/Kosugi+Maru">Kosugi Maru</a><br />
+                        <span>Made with: React</span>
+                    </>
+
                     : <span></span>
                 }
             </div>
@@ -104,6 +114,10 @@ const Home = () => {
                 <div className="linkBox" id="githubBox" style={tab === 'github' ? {background: 'rgb(7,255,234)'} : {}} onClick={() => slide('github')}>
                     <img src={github} width="20" height="20" alt="github" />
                     <span> GitHub</span>
+                </div>
+                <div className="linkBox" id="creditsBox" style={tab === 'credits' ? {background: 'rgb(7,255,234)'} : {}} onClick={() => slide('credits')}>
+                    <img src={credits} width="20" height="20" alt="credits" />
+                    <span> Credits</span>
                 </div>
             </div>
         </div>
