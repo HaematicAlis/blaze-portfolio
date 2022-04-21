@@ -85,6 +85,13 @@
     bottom: 0%;
 }
 
+.treeImage {
+    width: 700px;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+
 .titleText {
     font-family: 'Kosugi Maru';
     font-size: 64px;
