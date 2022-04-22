@@ -52,7 +52,7 @@ const Home = () => {
                     ? <>
                         <span><b>Blaze Comic Viewer</b></span><br /><br />
                         <img src={comicviewer} alt="comicviewer" width="400" onClick={() => setPopup({ visible: true, image: comicviewer })} />
-                        <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
+                        <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <hr />
                         <span>·	Comic viewer website for language learning made with React and MERN stack</span><br />
                         <span>·	Uses Imgur API to upload albums as comics</span><br />
