@@ -1,5 +1,6 @@
 {
   "name": "blaze-portfolio",
+  "homepage": "http://blazewiseman.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
