@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, vaporwave, tree, alice, carrotwolf, comicviewer, magnify, xicon, credits } from '../images';
+import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
@@ -42,7 +42,6 @@ const Home = () => {
         }
         <div className="outerContainer">
             <img className="animeImage" src={vaporwave} alt="vaporwave" />
-            <img className="treeImage" src={tree} alt="tree" />
             <span className="titleText" style={{color: 'rgb(7,255,234)', left: '55px', top: '52px'}}>Blaze Wiseman</span>
             <span className="titleText">Blaze Wiseman</span>
             <span className="titleText" style={{color: 'black', left: '55px'}}>Blaze Wiseman</span>
