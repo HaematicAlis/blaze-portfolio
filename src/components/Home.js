@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, anime, tree, alice, carrotwolf, comicviewer, magnify, xicon, credits } from '../images';
+import { carrot, github, viewer, vaporwave, tree, alice, carrotwolf, comicviewer, magnify, xicon, credits } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
@@ -41,11 +41,11 @@ const Home = () => {
             </>
         }
         <div className="outerContainer">
-            <img className="animeImage" src={anime} alt="anime" />
+            <img className="animeImage" src={vaporwave} alt="vaporwave" />
             <img className="treeImage" src={tree} alt="tree" />
-            <span className="titleText" style={{color: 'rgb(7,255,234)', left: '55px', top: '52px'}}>水を飲む</span>
-            <span className="titleText">水を飲む</span>
-            <span className="titleText" style={{color: 'black', left: '55px'}}>水を飲む</span>
+            <span className="titleText" style={{color: 'rgb(7,255,234)', left: '55px', top: '52px'}}>Blaze Wiseman</span>
+            <span className="titleText">Blaze Wiseman</span>
+            <span className="titleText" style={{color: 'black', left: '55px'}}>Blaze Wiseman</span>
             <div className="homeContainer" id="detailsContainer">
                 {
                     tab === 'viewer'
@@ -91,12 +91,12 @@ const Home = () => {
 
                     : tab === 'credits'
                     ? <>
-                        <span>Image by: [artist unknown]</span><br />
                         <span>Confetti particle script: </span>
                         <a href="https://www.cssscript.com/confetti-falling-animation/">CSS Script</a><br />
                         <span>Font: </span>
                         <a href="https://fonts.google.com/specimen/Kosugi+Maru">Kosugi Maru</a><br />
-                        <span>Made with: React</span>
+                        <span>Made with: React</span><br />
+                        <span>Image by: me</span>
                     </>
 
                     : <span></span>
