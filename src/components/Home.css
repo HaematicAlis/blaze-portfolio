@@ -15,6 +15,7 @@
 .outerContainer {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     background-image: linear-gradient(to bottom, rgb(248,154,255), rgb(7,255,234));
 }
 
@@ -86,10 +87,8 @@
 }
 
 .vaporwaveImage {
-    width: 500px;
-    position: absolute;
-    left: 0%;
-    bottom: 0%;
+    height: 100vh;
+    filter: drop-shadow(10px 0px 10px black);
 }
 
 .aliceImage {
