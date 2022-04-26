@@ -54,6 +54,12 @@
     background: rgb(7,255,234);
 }
 
+#resumeBox {
+    position: absolute;
+    bottom: 0;
+    width: 87.5%;
+}
+
 @keyframes linkFade {
     from { background: white; }
     to { background: rgb(7,255,234); }

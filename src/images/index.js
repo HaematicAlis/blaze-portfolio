@@ -10,3 +10,4 @@ export const xicon = require('./xicon.png');
 export const credits = require('./credits.png');
 export const red = require('./red.png');
 export const seventhree = require('./seventhree.png');
+export const downarrow = require('./downarrow.png');

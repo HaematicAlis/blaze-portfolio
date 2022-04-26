@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree } from '../images';
+import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree, downarrow } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
@@ -113,6 +113,16 @@ const Home = () => {
                         <span>Image by: me</span>
                     </>
 
+                    : tab === 'resume'
+                    ? <>
+                        <span>Confetti particle script: </span>
+                        <a href="https://www.cssscript.com/confetti-falling-animation/">CSS Script</a><br />
+                        <span>Font: </span>
+                        <a href="https://fonts.google.com/specimen/Kosugi+Maru">Kosugi Maru</a><br />
+                        <span>Made with: React</span><br />
+                        <span>Image by: me</span>
+                    </>
+
                     : <span></span>
                 }
             </div>
@@ -137,6 +147,12 @@ const Home = () => {
                     <img src={credits} width="20" height="20" alt="credits" />
                     <span> Credits</span>
                 </div>
+                <a href="http://blazewiseman.com/files/resume.pdf" download style={{color: 'black'}}>
+                    <div className="linkBox" id="resumeBox" style={tab === 'resume' ? {background: 'rgb(7,255,234)'} : {}}>
+                        <img src={downarrow} width="20" height="20" alt="downarrow" />
+                        <span> Resume</span>
+                    </div>
+                </a>
             </div>
         </div>
     </>
