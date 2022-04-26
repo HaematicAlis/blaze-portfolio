@@ -1,6 +1,6 @@
 .homeContainer {
-    width: 400px;
-    height: 500px;
+    width: 450px;
+    height: 550px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -9,6 +9,7 @@
     background-image: linear-gradient(to bottom, rgb(248,154,255), rgb(7,255,234));
     outline: 1px solid black;
     font-family: 'Kosugi Maru';
+    font-size: 18px;
 }
 
 .outerContainer {
@@ -20,13 +21,13 @@
 .slideLeft {
     animation-name: slideLeft;
     animation-duration: 0.5s;
-    left: 38%;
+    left: 37%;
 }
 
 .slideRight {
     animation-name: slideRight;
     animation-duration: 0.5s;
-    left: 62%;
+    left: 63%;
 }
 
 .undoSlideLeft {
@@ -60,35 +61,28 @@
 
 @keyframes slideLeft {
     from { left: 50%; }
-    to { left: 38%; }
+    to { left: 37%; }
 }
 
 @keyframes slideRight {
     from { left: 50%; }
-    to { left: 62%; }
+    to { left: 63%; }
 }
 
 @keyframes undoSlideLeft {
-    from { left: 38%; }
+    from { left: 37%; }
     to { left: 50%; }
 }
 
 @keyframes undoSlideRight {
-    from { left: 62%; }
+    from { left: 63%; }
     to { left: 50%; }
 }
 
-.animeImage {
+.vaporwaveImage {
     width: 500px;
     position: absolute;
     left: 0%;
-    bottom: 0%;
-}
-
-.treeImage {
-    width: 700px;
-    position: absolute;
-    right: 0%;
     bottom: 0%;
 }
 
@@ -101,7 +95,7 @@
 .magnifyImage {
     width: 50px;
     position: absolute;
-    top: 60px;
+    top: 65px;
     right: 25px;
 }
 

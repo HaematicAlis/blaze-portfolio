@@ -41,7 +41,7 @@ const Home = () => {
             </>
         }
         <div className="outerContainer">
-            <img className="animeImage" src={vaporwave} alt="vaporwave" />
+            <img className="vaporwaveImage" src={vaporwave} alt="vaporwave" />
             <span className="titleText" style={{color: 'rgb(7,255,234)', left: '55px', top: '52px'}}>Blaze Wiseman</span>
             <span className="titleText">Blaze Wiseman</span>
             <span className="titleText" style={{color: 'black', left: '55px'}}>Blaze Wiseman</span>
@@ -50,7 +50,7 @@ const Home = () => {
                     tab === 'viewer'
                     ? <>
                         <span><b>Blaze Comic Viewer</b></span><br /><br />
-                        <img src={comicviewer} alt="comicviewer" width="400" onClick={() => setPopup({ visible: true, image: comicviewer })} />
+                        <img src={comicviewer} alt="comicviewer" width="450" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <hr />
                         <span>·	Comic viewer website for language learning made with React and MERN stack</span><br />
@@ -58,14 +58,14 @@ const Home = () => {
                         <span>·	Vocabulary can be added to each page individually</span><br />
                         <span>·	Full vocab list and comic completion can be viewed from the shelf</span><br />
                         <span>·	Integrated dictionary search and zoom settings</span><br />
-                        <span><b>· React, MERN, JavaScript, MongoDB, ExpressJS, NodeJS, HTML, CSS, Redux, Material UI</b></span><br /><br />
+                        <span><b>· React, MERN, JavaScript, MongoDB, ExpressJS, NodeJS, HTML, CSS, Redux, Material UI</b></span><br />
                         <a href="https://blaze-comic-viewer.netlify.app">Demo it here with Username: Freeze, Password: 123</a>
                     </>
 
                     : tab === 'carrot'
                     ? <>
                         <span><b>CarrotWolf</b></span><br /><br />
-                        <img src={carrotwolf} alt="carrotwolf" width="400" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
+                        <img src={carrotwolf} alt="carrotwolf" width="450" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
                         <hr />
                         <span>·	Turn-based strategy browser game made with React</span><br />
@@ -73,7 +73,7 @@ const Home = () => {
                         <span>·	Controlled using keyboard input and the mouse</span><br />
                         <span>·	Styled with Material UI and custom components</span><br />
                         <span>·	Features enemy AI and random collectable items</span><br />
-                        <span><b>· React, JS, HTML, CSS, Redux, Material UI</b></span><br /><br />
+                        <span><b>· React, JS, HTML, CSS, Redux, Material UI</b></span><br />
                         <a href="http://hershnagpal.github.io/carrot-client/">Play the game here!</a>
 
                     </>
