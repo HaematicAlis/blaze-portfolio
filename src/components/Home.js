@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits } from '../images';
+import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
@@ -62,6 +62,21 @@ const Home = () => {
                         <a href="https://blaze-comic-viewer.netlify.app">Demo it here with Username: Freeze, Password: 123</a>
                     </>
 
+                    : tab === '7red3'
+                    ? <>
+                        <span><b>7Red3</b></span><br /><br />
+                        <img src={red} alt="red" width="450" onClick={() => setPopup({ visible: true, image: red })} />
+                        <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: red })} />
+                        <hr />
+                        <span>·	Company website for 7Red3</span><br />
+                        <span>·	Used as a portfolio of motion graphics work</span><br />
+                        <span>·	Motion work shows Vimeo popups and design work shows image collections</span><br />
+                        <span>·	Admin dashboard for uploading and managing the work in the database</span><br />
+                        <span><b>· React, JS, HTML, CSS, MySQL, PHP, GoDaddy</b></span><br /><br />
+                        <a href="https://7red3.com">Check it out here!</a>
+
+                    </>
+
                     : tab === 'carrot'
                     ? <>
                         <span><b>CarrotWolf</b></span><br /><br />
@@ -105,6 +120,10 @@ const Home = () => {
                 <div className="linkBox" id="viewerBox" style={tab === 'viewer' ? {background: 'rgb(7,255,234)'} : {}} onClick={() => slide('viewer')}>
                     <img src={viewer} width="20" height="20" alt="viewer" />
                     <span> Blaze Comic Viewer</span>
+                </div>
+                <div className="linkBox" id="7red3box" style={tab === '7red3' ? {background: 'rgb(7,255,234)'} : {}} onClick={() => slide('7red3')}>
+                    <img src={seventhree} width="20" height="20" alt="seventhree" />
+                    <span> 7Red3</span>
                 </div>
                 <div className="linkBox" id="carrotBox" style={tab === 'carrot' ? {background: 'rgb(7,255,234)'} : {}} onClick={() => slide('carrot')}>
                     <img src={carrot} width="20" height="20" alt="carrot" />
