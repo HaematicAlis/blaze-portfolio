@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree, downarrow } from '../images';
+import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree, downarrow, maximize } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
@@ -117,6 +117,13 @@ const Home = () => {
                 }
             </div>
             <div className="homeContainer" id="linksContainer">
+                <div className="homeBar">
+                    <span style={{position: 'absolute', top: '4px'}}>&nbsp;*    Local Disc (C:/{tab === 'none' ? '' : tab})</span>
+                    <span className="homeIcon" style={{right: '0px'}}>X</span>
+                    <span className="homeIcon" style={{right: '36px'}}>
+                        <img src={maximize} alt="maximize" width="20" style={{position: 'absolute', left: '8px', top: '5px' }} />
+                    </span>
+                </div>
                 <div className="linkBox" id="viewerBox" style={tab === 'viewer' ? {background: 'rgb(7,255,234)'} : {}} onClick={() => slide('viewer')}>
                     <img src={viewer} width="20" height="20" alt="viewer" />
                     <span> Blaze Comic Viewer</span>
