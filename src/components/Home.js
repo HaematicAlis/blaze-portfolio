@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree, downarrow, maximize } from '../images';
+import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree, downarrow, maximize, backarrow } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
@@ -46,6 +46,7 @@ const Home = () => {
             <span className="titleText">Blaze Wiseman</span>
             <span className="titleText" style={{color: 'black', left: '55px'}}>Blaze Wiseman</span>
             <div className="homeContainer" id="detailsContainer">
+            <img className="backarrowImage" src={backarrow} alt="backarrow" onClick={() => slide(tab)} />
                 {
                     tab === 'viewer'
                     ? <>

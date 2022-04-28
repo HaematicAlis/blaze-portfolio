@@ -136,6 +136,19 @@
     width: 60px;
 }
 
+.backarrowImage {
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.backarrowImage:hover {
+    width: 25px;
+    right: 8px;
+    top: 8px;
+}
+
 .titleText {
     font-family: 'Kosugi Maru';
     font-size: 64px;

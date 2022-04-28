@@ -12,3 +12,4 @@ export const red = require('./red.png');
 export const seventhree = require('./seventhree.png');
 export const downarrow = require('./downarrow.png');
 export const maximize = require('./maximize.png');
+export const backarrow = require('./backarrow.png');
