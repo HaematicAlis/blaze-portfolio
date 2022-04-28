@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree, downarrow, maximize, backarrow } from '../images';
+import { carrot, github, viewer, vaporwave, alice, carrotwolf, comicviewer, magnify, xicon, credits, red, seventhree, downarrow, backarrow } from '../images';
 import { startConfetti } from '../confetti';
 
 const Home = () => {
@@ -29,6 +29,23 @@ const Home = () => {
         }
     };
 
+    const getName = () => {
+        switch (tab) {
+            case 'viewer':
+                return 'Blaze Comic Viewer';
+            case '7red3':
+                return '7Red3 Motion Graphics Studio';
+            case 'carrot':
+                return 'CarrotWolf - The Wolf Who Cried Carrot';
+            case 'github':
+                return 'GitHub';
+            case 'credits':
+                return 'Credits';
+            default:
+                return '';
+        }
+    };
+
     return <>
         {   
             popup.visible && <>
@@ -46,11 +63,15 @@ const Home = () => {
             <span className="titleText">Blaze Wiseman</span>
             <span className="titleText" style={{color: 'black', left: '55px'}}>Blaze Wiseman</span>
             <div className="homeContainer" id="detailsContainer">
-            <img className="backarrowImage" src={backarrow} alt="backarrow" onClick={() => slide(tab)} />
+            <div className="homeBar">
+                <span style={{position: 'absolute', top: '4px'}}>&nbsp;* {getName()}</span>
+                <span className="homeIcon" onClick={() => slide(tab)}>
+                    <img className="backarrowImage" src={backarrow} alt="backarrow" />
+                </span>
+            </div>
                 {
                     tab === 'viewer'
                     ? <>
-                        <span><b>Blaze Comic Viewer</b></span><br /><br />
                         <img src={comicviewer} alt="comicviewer" width="450" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <hr />
@@ -65,7 +86,6 @@ const Home = () => {
 
                     : tab === '7red3'
                     ? <>
-                        <span><b>7Red3</b></span><br /><br />
                         <img src={red} alt="red" width="450" onClick={() => setPopup({ visible: true, image: red })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: red })} />
                         <hr />
@@ -80,7 +100,6 @@ const Home = () => {
 
                     : tab === 'carrot'
                     ? <>
-                        <span><b>CarrotWolf</b></span><br /><br />
                         <img src={carrotwolf} alt="carrotwolf" width="450" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
                         <hr />
@@ -120,10 +139,7 @@ const Home = () => {
             <div className="homeContainer" id="linksContainer">
                 <div className="homeBar">
                     <span style={{position: 'absolute', top: '4px'}}>&nbsp;*    Local Disc (C:/{tab === 'none' ? '' : tab})</span>
-                    <span className="homeIcon" style={{right: '0px'}}>X</span>
-                    <span className="homeIcon" style={{right: '36px'}}>
-                        <img src={maximize} alt="maximize" width="20" style={{position: 'absolute', left: '8px', top: '5px' }} />
-                    </span>
+                    <span className="homeIcon">X</span>
                 </div>
                 <div className="linkBox" id="viewerBox" style={tab === 'viewer' ? {background: 'rgb(7,255,234)'} : {}} onClick={() => slide('viewer')}>
                     <img src={viewer} width="20" height="20" alt="viewer" />
