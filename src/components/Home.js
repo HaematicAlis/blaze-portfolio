@@ -75,13 +75,16 @@ const Home = () => {
                         <img src={comicviewer} alt="comicviewer" width="450" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <hr />
-                        <span>·	Comic viewer website for language learning made with React and MERN stack</span><br />
+                        <span>·	Comic viewer website for language learning</span><br />
+                        <span>· Made with React and MERN stack on Netlify</span><br />
                         <span>·	Uses Imgur API to upload albums as comics</span><br />
-                        <span>·	Vocabulary can be added to each page individually</span><br />
-                        <span>·	Full vocab list and comic completion can be viewed from the shelf</span><br />
+                        <span>·	Vocab can be added to each page individually</span><br />
+                        <span>· Shelf to view, sort, and manage comics and books</span><br />
+                        <span>·	Full vocab list and completion % can be viewed</span><br />
                         <span>·	Integrated dictionary search and zoom settings</span><br />
-                        <span><b>· React, MERN, JavaScript, MongoDB, ExpressJS, NodeJS, HTML, CSS, Redux, Material UI</b></span><br />
-                        <a href="https://blaze-comic-viewer.netlify.app" target="_blank" rel="noreferrer">Demo it here with Username: Freeze, Password: 123</a>
+                        <span><b>· React, MERN, JavaScript, MongoDB, ExpressJS,</b></span><br />
+                        <span><b>&nbsp;&nbsp;NodeJS, HTML, CSS, Redux, Material UI</b></span><br />
+                        <a className="bottomText" href="https://blaze-comic-viewer.netlify.app" target="_blank" rel="noreferrer">Demo it here with Username: Freeze, Password: 123</a>
                     </>
 
                     : tab === '7red3'
@@ -91,10 +94,12 @@ const Home = () => {
                         <hr />
                         <span>·	Company website for 7Red3</span><br />
                         <span>·	Used as a portfolio of motion graphics work</span><br />
-                        <span>·	Motion work shows Vimeo popups and design work shows image collections</span><br />
-                        <span>·	Admin dashboard for uploading and managing the work in the database</span><br />
+                        <span>·	Motion work shows Vimeo popups</span><br />
+                        <span>· Design work shows image collections</span><br />
+                        <span>·	Admin dashboard for uploading and managing</span><br />
+                        <span>·	Admin can edit and reorder work in the database</span><br />
                         <span><b>· React, JS, HTML, CSS, MySQL, PHP, GoDaddy</b></span><br /><br />
-                        <a href="https://7red3.com" target="_blank" rel="noreferrer">Check it out here!</a>
+                        <a className="bottomText" href="https://7red3.com" target="_blank" rel="noreferrer">Check it out here!</a>
 
                     </>
 
@@ -109,7 +114,7 @@ const Home = () => {
                         <span>·	Styled with Material UI and custom components</span><br />
                         <span>·	Features enemy AI and random collectable items</span><br />
                         <span><b>· React, JS, HTML, CSS, Redux, Material UI</b></span><br />
-                        <a href="http://hershnagpal.github.io/carrot-client/" target="_blank" rel="noreferrer">Play the game here!</a>
+                        <a className="bottomText" href="http://hershnagpal.github.io/carrot-client/" target="_blank" rel="noreferrer">Play the game here!</a>
 
                     </>
 
@@ -120,7 +125,7 @@ const Home = () => {
                         <hr />
                         <span>Currently working on:</span><br />
                         <span><b>Portfolio website</b></span><br /><br />
-                        <a href="https://github.com/HaematicAlis" target="_blank" rel="noreferrer">Click here for my GitHub!</a>
+                        <a className="bottomText" href="https://github.com/HaematicAlis" target="_blank" rel="noreferrer">Click here for my GitHub!</a>
                     </>
 
                     : tab === 'credits'
@@ -130,7 +135,7 @@ const Home = () => {
                         <span>Font: </span>
                         <a href="https://fonts.google.com/specimen/Kosugi+Maru" target="_blank" rel="noreferrer">Kosugi Maru</a><br />
                         <span>Made with: React</span><br />
-                        <span>Image by: me</span>
+                        <span>Website and artwork by: me</span>
                     </>
 
                     : <span></span>
