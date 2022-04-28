@@ -49,19 +49,18 @@ const Home = () => {
     return <>
         {   
             popup.visible && <>
-                <div className="popupOverlay" onClick={() => setPopup({ visible: false, image: 'none' })}>
-                    <img className="magnifyImage" src={xicon} alt="xicon" />
-                </div>
+                <div className="popupOverlay" onClick={() => setPopup({ visible: false, image: 'none' })}></div>
+                <img className="magnifyImage" src={xicon} alt="xicon" onClick={() => setPopup({ visible: false, image: 'none' })}/>
                 <div className="imagePopup">
-                    <img className="centeredImage" src={popup.image} alt={popup.image} height="800" />
+                    <img className="centeredImage" src={popup.image} alt={popup.image} />
                 </div>
             </>
         }
         <div className="outerContainer">
             <img className="vaporwaveImage" src={vaporwave} alt="vaporwave" />
-            <span className="titleText" style={{color: 'rgb(7,255,234)', left: '55px', top: '52px'}}>Blaze Wiseman</span>
+            <span className="titleText" style={{color: 'rgb(7,255,234)', right: '22px', top: '17px'}}>Blaze Wiseman</span>
             <span className="titleText">Blaze Wiseman</span>
-            <span className="titleText" style={{color: 'black', left: '55px'}}>Blaze Wiseman</span>
+            <span className="titleText" style={{color: 'black', right: '25px'}}>Blaze Wiseman</span>
             <div className="homeContainer" id="detailsContainer">
             <div className="homeBar">
                 <span style={{position: 'absolute', top: '4px'}}>&nbsp;* {getName()}</span>
@@ -72,7 +71,7 @@ const Home = () => {
                 {
                     tab === 'viewer'
                     ? <>
-                        <img src={comicviewer} alt="comicviewer" width="450" onClick={() => setPopup({ visible: true, image: comicviewer })} />
+                        <img className="thumbnailImage" src={comicviewer} alt="comicviewer" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: comicviewer })} />
                         <hr />
                         <span>·	Comic viewer website for language learning</span><br />
@@ -89,7 +88,7 @@ const Home = () => {
 
                     : tab === '7red3'
                     ? <>
-                        <img src={red} alt="red" width="450" onClick={() => setPopup({ visible: true, image: red })} />
+                        <img className="thumbnailImage" src={red} alt="red" onClick={() => setPopup({ visible: true, image: red })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: red })} />
                         <hr />
                         <span>·	Company website for 7Red3</span><br />
@@ -105,7 +104,7 @@ const Home = () => {
 
                     : tab === 'carrot'
                     ? <>
-                        <img src={carrotwolf} alt="carrotwolf" width="450" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
+                        <img className="thumbnailImage" src={carrotwolf} alt="carrotwolf" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
                         <img className="magnifyImage" src={magnify} alt="magnify" onClick={() => setPopup({ visible: true, image: carrotwolf })} />
                         <hr />
                         <span>·	Turn-based strategy browser game made with React</span><br />

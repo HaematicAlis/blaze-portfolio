@@ -50,13 +50,13 @@
 .slideLeft {
     animation-name: slideLeft;
     animation-duration: 0.5s;
-    left: 37%;
+    left: calc(50% - 250px);
 }
 
 .slideRight {
     animation-name: slideRight;
     animation-duration: 0.5s;
-    left: 63%;
+    left: calc(50% + 250px);
 }
 
 .undoSlideLeft {
@@ -96,22 +96,26 @@
 
 @keyframes slideLeft {
     from { left: 50%; }
-    to { left: 37%; }
+    to { left: calc(50% - 250px); }
 }
 
 @keyframes slideRight {
     from { left: 50%; }
-    to { left: 63%; }
+    to { left: calc(50% + 250px); }
 }
 
 @keyframes undoSlideLeft {
-    from { left: 37%; }
+    from { left: calc(50% - 250px); }
     to { left: 50%; }
 }
 
 @keyframes undoSlideRight {
-    from { left: 63%; }
+    from { left: calc(50% + 250px); }
     to { left: 50%; }
+}
+
+.thumbnailImage {
+    width: 450px;
 }
 
 .vaporwaveImage {
@@ -130,6 +134,7 @@
     position: absolute;
     top: 60px;
     right: 25px;
+    z-index: 15;
 }
 
 .magnifyImage:hover {
@@ -148,8 +153,8 @@
     font-family: 'Kosugi Maru';
     font-size: 64px;
     position: absolute;
-    left: 50px;
-    top: 50px;
+    right: 30px;
+    top: 15px;
     color: rgb(248,104,255);
 }
 
@@ -178,6 +183,7 @@
 }
 
 .centeredImage {
+    height: 800px;
     position: relative;
     left: 50%;
     top: 50%;
@@ -189,30 +195,117 @@ a {
     color: blue;
 }
 
-@media screen and (min-height: 0px) and (max-height: 600px) {
+@media screen and (min-height: 0px) and (max-height: 599px) {
     .homeContainer {
         height: 300px;
         width: 250px;
         font-size: 10px;
     }
-    .homeBar {
-        width: 280px;
+    .homeBar { width: 280px; }
+    .linkBox { padding: 5px; }
+    .thumbnailImage { width: 250px; }
+    .imagePopup { height: 300px; }
+    .centeredImage { height: 300px; }
+    .slideLeft { left: calc(50% - 150px); }
+    .slideRight { left: calc(50% + 150px); }
+    @keyframes slideLeft {
+        from { left: 50%; }
+        to { left: calc(50% - 150px); }
     }
-    .linkBox {
-        padding: 5px;
+    @keyframes slideRight {
+        from { left: 50%; }
+        to { left: calc(50% + 150px); }
+    }
+    @keyframes undoSlideLeft {
+        from { left: calc(50% - 150px); }
+        to { left: 50%; }
+    }
+    @keyframes undoSlideRight {
+        from { left: calc(50% + 150px); }
+        to { left: 50%; }
     }
 }
 
-@media screen and (min-width: 0px) and (max-width: 600px) {
+@media screen and (min-width: 1000px) and (max-width: 1600px) {
+    .imagePopup { height: 500px; }
+    .centeredImage { height: 500px; }
+}
+
+@media screen and (min-height: 600px) and (max-height: 800px) {
+    .imagePopup { height: 600px; }
+    .centeredImage { height: 600px; }
+}
+
+@media screen and (min-width: 600px) and (max-width: 999px) {
     .homeContainer {
         height: 300px;
         width: 250px;
         font-size: 10px;
     }
-    .homeBar {
-        width: 280px;
+    .homeBar { width: 280px; }
+    .linkBox { padding: 5px; }
+    .thumbnailImage { width: 250px; }
+    .magnifyImage { width: 40px; }
+    .magnifyImage:hover { width: 50px; }
+    .imagePopup { height: 300px; }
+    .centeredImage { height: 300px; }
+    .slideLeft { left: calc(50% - 150px); }
+    .slideRight { left: calc(50% + 150px); }
+    @keyframes slideLeft {
+        from { left: 50%; }
+        to { left: calc(50% - 150px); }
     }
-    .linkBox {
-        padding: 5px;
+    @keyframes slideRight {
+        from { left: 50%; }
+        to { left: calc(50% + 150px); }
+    }
+    @keyframes undoSlideLeft {  
+        from { left: calc(50% - 150px); }
+        to { left: 50%; }
+    }
+    @keyframes undoSlideRight {
+        from { left: calc(50% + 150px); }
+        to { left: 50%; }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 599px) {
+    .homeContainer {
+        height: 300px;
+        width: 250px;
+        font-size: 10px;
+    }
+    .homeBar { width: 280px; }
+    .linkBox { padding: 5px; }
+    .thumbnailImage { width: 250px; }
+    .magnifyImage { width: 40px; }
+    .magnifyImage:hover { width: 50px; }
+    .imagePopup { height: 200px; }
+    .centeredImage { height: 200px; }
+    .slideLeft {
+        z-index: 0; 
+        left: 50%;
+        animation-duration: 0s;
+    }
+    .slideRight {
+        z-index: 1;
+        left: 50%;
+        animation-duration: 0s;
+    }
+    @keyframes slideLeft {
+        from { z-index: 0; }
+        to { z-index: 1; }
+    }
+    @keyframes slideRight {
+        from { z-index: 0; }
+        to { z-index: 1; }
+    }
+    @keyframes undoSlideLeft {
+        from { z-index: 1; }
+        to { z-index: 0; }
+    }
+    @keyframes undoSlideRight {
+        from { z-index: 1; }
+        to { z-index: 0; }
     }
 }
