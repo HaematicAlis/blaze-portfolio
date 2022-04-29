@@ -19,7 +19,7 @@
     outline: 1px solid black;
     font-family: 'Kosugi Maru';
     font-size: 18px;
-    filter: drop-shadow(5px 5px 5px #5B5060);
+    box-shadow: 6px 6px rgba(91,80,96,0.5);
     user-select: none;
 }
 
