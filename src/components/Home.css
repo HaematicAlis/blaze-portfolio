@@ -5,10 +5,9 @@
     background-image: linear-gradient(to bottom, rgb(248,154,255), rgb(7,255,234));
 }
 
-
 .homeContainer {
     width: 450px;
-    height: 550px;
+    height: 55vh;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -47,6 +46,17 @@
     background: rgb(248,154,255);   
 }
 
+.homeBarText {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.textContainer {
+    overflow-y: auto;
+    height: 25vh;
+}
+
 .slideLeft {
     animation-name: slideLeft;
     animation-duration: 0.5s;
@@ -75,6 +85,9 @@
     outline: 1px solid black;
     padding: 15px;
     margin-bottom: 15px;
+    height: 2vh;
+    position: relative;
+    width: 420px;
 }
 
 .linkBox:hover {
@@ -83,10 +96,24 @@
     background: rgb(7,255,234);
 }
 
+.linkBoxText {
+    position: absolute;
+    top: 50%;
+    left: 6vh;
+    transform: translate(0, -50%);
+}
+
+.linkBoxIcon {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 2.5vh;
+    width: 2.5vh;
+}
+
 #resumeBox {
     position: absolute;
     bottom: 0;
-    width: 87.5%;
 }
 
 @keyframes linkFade {
@@ -115,7 +142,13 @@
 }
 
 .thumbnailImage {
+    height: 23vh;
+}
+
+.thumbnailBox {
+    height: 23vh;
     width: 450px;
+    overflow: hidden;
 }
 
 .vaporwaveImage {
@@ -195,15 +228,47 @@ a {
     color: blue;
 }
 
-@media screen and (min-height: 0px) and (max-height: 599px) {
+@media screen and (min-height: 510px) and (max-height: 599px) {
     .homeContainer {
-        height: 300px;
         width: 250px;
-        font-size: 10px;
+        font-size: 18px;
     }
     .homeBar { width: 280px; }
-    .linkBox { padding: 5px; }
-    .thumbnailImage { width: 250px; }
+    .linkBox { width: 220px; padding: 13px; }
+    .thumbnailBox { width: 250px; }
+    .imagePopup { height: 300px; }
+    .centeredImage { height: 300px; }
+    .slideLeft { left: calc(50% - 150px); }
+    .slideRight { left: calc(50% + 150px); }
+    @keyframes slideLeft {
+        from { left: 50%; }
+        to { left: calc(50% - 150px); }
+    }
+    @keyframes slideRight {
+        from { left: 50%; }
+        to { left: calc(50% + 150px); }
+    }
+    @keyframes undoSlideLeft {
+        from { left: calc(50% - 150px); }
+        to { left: 50%; }
+    }
+    @keyframes undoSlideRight {
+        from { left: calc(50% + 150px); }
+        to { left: 50%; }
+    }
+}
+
+@media screen and (min-height: 0px) and (max-height: 509px) {
+    .homeContainer {
+        width: 250px;
+        height: 70vh;
+        font-size: 18px;
+    }
+    .homeBar { width: 280px; }
+    .linkBox { width: 220px; padding: 8px; }
+    .linkBoxText { left: 10vh; }
+    .textContainer { height: 33vh; }
+    .thumbnailBox { width: 250px; }
     .imagePopup { height: 300px; }
     .centeredImage { height: 300px; }
     .slideLeft { left: calc(50% - 150px); }
@@ -238,13 +303,12 @@ a {
 
 @media screen and (min-width: 600px) and (max-width: 999px) {
     .homeContainer {
-        height: 300px;
         width: 250px;
-        font-size: 10px;
+        font-size: 18px;
     }
     .homeBar { width: 280px; }
-    .linkBox { padding: 5px; }
-    .thumbnailImage { width: 250px; }
+    .linkBox { width: 220px; }
+    .thumbnailBox { width: 250px; }
     .magnifyImage { width: 40px; }
     .magnifyImage:hover { width: 50px; }
     .imagePopup { height: 300px; }
@@ -271,13 +335,12 @@ a {
 
 @media screen and (min-width: 0px) and (max-width: 599px) {
     .homeContainer {
-        height: 300px;
         width: 250px;
-        font-size: 10px;
+        font-size: 18px;
     }
     .homeBar { width: 280px; }
-    .linkBox { padding: 5px; }
-    .thumbnailImage { width: 250px; }
+    .linkBox { width: 220px; padding: 13px;}
+    .thumbnailBox { width: 250px; }
     .magnifyImage { width: 40px; }
     .magnifyImage:hover { width: 50px; }
     .imagePopup { height: 200px; }
